@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="april_cube_top">
+
+  <xacro:include filename="$(find tams_apriltags)/urdf/apriltag_box.xacro" />
+
+  <!-- note that our apriltag textures include the white border around
+       the actual pattern (100x100 pixels total, with 80x80 pixels pattern).
+       For example, our demo cubes are 72x72x72 mm diameter, and this
+       needs to be specified here for marker_size. The apriltags node
+       instead want the "internal" size, which is 0.058 (0.072*80/100)  
+       in this case.
+  -->
+  <xacro:arg name="name" default="april_cube_top"/>
+  <xacro:arg name="id" default="0"/>
+  <xacro:arg name="sx" default="0.1"/>
+  <xacro:arg name="sy" default="0.1"/>
+  <xacro:arg name="sz" default="0.1"/>
+  <xacro:arg name="color" default="0.5 0.5 0.5 1"/>
+  <xacro:arg name="gazebo_color" default="red"/>
+
+
+  <xacro:apriltag_box name="$(arg name)" sx="$(arg sx)" sy="$(arg sy)" sz="$(arg sz)"
+                      color="$(arg color)" gazebo_color="$(arg gazebo_color)"
+                      ID="$(arg id)"/>
+
+</robot>

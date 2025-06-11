@@ -8,7 +8,7 @@
   <arg name="z" default="0.01" />
 
   <!-- doesn't work anymore <arg name="world_name" default="$(find gazebo_ros)/worlds/empty.world" /> -->
-  <arg name="world_name" default="worlds/empty.world" /> -->
+  <arg name="world_name" default="worlds/empty.world" />
 
 
   <!-- upload the robot xacro/urdf to the param server -->

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<sdf version="1.11">
+  <model name="tams_apriltags">
+    <static>true</static>
+    <link name="dummy_link">
+      <visual name="tag_visual">
+        <geometry>
+          <mesh>
+            <uri>model://tams_apriltags/models/meshes/tag36_11_00000.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
